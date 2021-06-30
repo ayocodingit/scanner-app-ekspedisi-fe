@@ -1,28 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <navbar />
+    <section id="app">
+      <div class="container">
+        <div class="row mt-2">
+          <div class="col">
+            <header-info />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <form-scan />
+          </div>
+          <div class="col-sm-8">
+            <list-ekspedisi />
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import FormScan from './components/FormScan.vue'
+  import HeaderInfo from './components/HeaderInfo.vue'
+  import ListEkspedisi from './components/ListEkspedisi.vue'
+  import Navbar from './components/Navbar.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+      Navbar,
+      ListEkspedisi,
+      FormScan,
+      HeaderInfo
+    }
   }
-}
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
