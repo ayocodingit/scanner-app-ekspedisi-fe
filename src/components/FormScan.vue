@@ -38,10 +38,9 @@
         name: 'form-scan',
         data() {
             return {
-                today: this.$moment().format('YYYY-MMMM-DD'),
+                today: this.$moment().format('DD MMMM YYYY'),
                 form: {
                     ekspedisi: "",
-                    date: new Date().toISOString(),
                     data: [
                         "1243243521",
                     ]
